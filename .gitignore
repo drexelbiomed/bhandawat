@@ -23,6 +23,7 @@ Gemfile.lock
 
 source/bower_components/
 data/ftp.yml
+data/azure.yml
 
 *.psd
 *.pdf

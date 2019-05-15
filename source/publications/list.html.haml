@@ -1,0 +1,14 @@
+---
+title: Publications List
+---
+
+%h1= current_page.data.title
+
+%ol
+  - data.publications.each do |pub|
+    %li
+      = pub.citation.gsub(/(?<name>V\. Bhandawat)/, '<strong>\k<name></strong>')
+      %br
+      Link: 
+      = link_to pub.link, "https://dx.doi.org/#{pub.doi}"
+  

@@ -1,5 +1,7 @@
 .home-panel
-  %h3 About
+  %h3 Recent Publications
   %ul.unstyled
-    %li The primary focus of research in our lab is to understand how the brain encodes sensory information and integrates this to produce intelligent motor output. We want to be able to use this knowledge to investigate changes in network activity under conditions of neural injury or dysfunction.
-  = link_to "About", "about", class: "more-link"
+    - data.publications[0..2].each do |pub|
+      %li= pub.citation.gsub(/(?<name>V\. Bhandawat)/, '<strong>\k<name></strong>')
+
+  = link_to "More Publications", "#{http_prefix}publications/list", class: "more-link"

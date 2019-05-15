@@ -1,0 +1,26 @@
+---
+title: Biomechanics of Locomotion
+layout: two-columns-left-nav
+---
+
+%h1= current_page.data.title
+
+%p Ultimately, moving its limb does not move the animal; forces from the substrate are essential. It is impossible to understand locomotion without understanding the mechanics of this interaction. It is well-known among bio-mechanists that there is considerable mechanical intelligence that simplifies the problem of control of locomotion.  In the context of legged locomotion, the idea of mechanical intelligence is encapsulated by the fact that simple mechanical models describe many features of walking and running: Inverted pendulum and spring-loaded inverted pendulum are two such models which describe the movement of the body during walking and running, respectively.
+
+%p Surprisingly, neither of these models come close to describing the movement of a fly’s COM during walking4. We found that these models did not work for flies because the flies move slowly relative to their size. Further analysis showed that the existing models were insufficient for any slow locomotion, including that of a human walking at a moderate speed of 3 miles per hour. Therefore, we devised a new high-throughput experimental paradigm to measure the fly’s COM kinematics with very high spatial resolution (<strong>Figure 1A</strong>). We also showed that a new model (<strong>Figure 1B</strong>) is an excellent model for a fly’s COM, and finally, we showed that an insect tripod gait naturally collapses to the model we propose (<strong>Figure 1C</strong>). 
+
+.panel
+  = link_to "#{http_prefix}images/fig-1-automated-method-footfall.png" do
+    = image_tag "fig-1-automated-method-footfall.png"
+
+%p More importantly, we demonstrate that this model appears to be a general model that describes the COM motion not only in the fly, but also in other insects and even humans. Second, every mechanical system has a fixed point. Remarkably, we found that the center of mass for both flies and humans are close to the fixed point of their respective mechanical system at mid-stance. This property is part of the mechanical intelligence at play during walking. Finally, we have a quantitative hypothesis for how neural and mechanical control affects the speed of locomotion. 
+
+%p We are currently investigating the generality of these ideas and to investigate the link between neural and mechanical control by 
+
+%ol
+  %li Developing mechanical models that describe not only forward walking but also turning. 
+  %li Developing mechanical models for walking on walls and ceiling.
+  %li Ultimately, we hope to arrive at a general model not only for flies but all insects.
+
+
+= partial "research/projects"

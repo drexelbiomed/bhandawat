@@ -1,0 +1,36 @@
+---
+title: From Sensation to Action
+layout: two-columns-left-nav
+---
+
+%h1= current_page.data.title
+
+.row  
+  .large-7.seven.columns
+    %p <strong>Algorithms and circuits underlying transformation of sensation to action.</strong> To understand how odors affect a fly’s locomotion, as well as the role of various olfactory neurons in this process, we made two innovations. First, we created an arena in which a fly’s locomotion could be studied under precisely controlled stimulus conditions (<strong>Figure 1</strong>). Second, we created two generative models of behavior that describe behaviors that unfold on multiple timescales. One generative model is the Hierarchical Hidden Markov model and describes how the fly’s movement is structured in the velocity space (<strong>Figure 2</strong>). We find that flies locomote using the same speed and curvature for extended periods of time. As a result, a fly’s locomotion can be decomposed into discrete units, which we call locomotor features (<strong>Figure 2</strong>). In our behavioral arena, a fly’s locomotion can be described in terms of these 10 discrete features. Odors affect locomotion by altering the fraction of time that a fly spends performing each locomotor feature. These locomotor features and their modulation by odors represent organization over tens of steps to hundreds of steps. Another important feature is that the effect of odors on locomotor primitives is modular: each olfactory neuron affects transitions between a subset of locomotor primitives, and a different (but overlapping) subset of active neurons affects each locomotor primitive. The overall behavioral effect of an odor is determined by which olfactory neurons it activates. 
+  .large-5.five.columns
+    .panel
+      = link_to "#{http_prefix}images/fig-1-novel-behavoiral.png" do
+        = image_tag "fig-1-novel-behavoiral.png"
+
+.row
+  .large-5.five.columns
+    .panel
+      = link_to "#{http_prefix}images/fig-2-locomotor-features.png" do
+        = image_tag "fig-2-locomotor-features.png"
+  .large-7.seven.columns
+    %p The organization of locomotion into chunks which are under modular organization is consistent with a reactive system which connects sensory features in the external world to modulation of small number of locomotor features at a relatively long time-scale.
+    %p Our current work is aimed at understanding the role of central circuits in the fly’s brain when generating locomotor features and in the modulation of locomotion due to odors (<strong>Figure 3</strong>). Previous work has suggested that two brain regions, the mushroom body (MB) and lateral horn (LH), are likely involved in transforming odor sensation into action. Based on preliminary experiments investigating the role of MB and LH in odor-modulated locomotion, we hypothesize that:
+    %ol
+      %li LH is critical for mediating sensorimotor transformation, which links the presence of a particular odor to its effect on transitions to a particular high-level state. For instance, silencing one population of LH neurons completely abolish odor-evoked transitions from State 2 to State 5 (in <strong>Figure 2</strong>).  
+      %li MB is likely not involved in direct sensorimotor transformation. MB combines the ongoing sensory experience with current demands and stimulus history to modulate behaviors. In particular, we have discovered that MB is important for short-term plasticity that develops over a few seconds. 
+.row
+  .large-7.seven.columns
+    %p We will test these two hypotheses using a multi-pronged approach. We will activate and inactivate small populations of MBONs and LHONs to assess their effect on behavior using a hierarchical statistical model. We will record from MBONs and LHONs to evaluate how they encode sensory input and motor output. 
+    %p Locomotor features describe how behavior is organized over 10-300 steps. To our knowledge, this is the only mathematical description of locomotion on this relatively long timescale.
+  .large-5.five.columns  
+    .panel
+      = link_to "#{http_prefix}images/fig-3-input-projection-neurons.png" do
+        = image_tag "fig-3-input-projection-neurons.png"
+      
+= partial "research/projects"
