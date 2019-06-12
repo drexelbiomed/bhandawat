@@ -9,6 +9,8 @@ title: Publications List
     %li
       = pub.citation.gsub(/(?<name>V\. Bhandawat)/, '<strong>\k<name></strong>')
       %br
-      Link: 
-      = link_to pub.link, "https://dx.doi.org/#{pub.doi}"
+      - case not pub.doi.blank?
+      - when true
+        Link: 
+        = link_to "doi: #{pub.doi}", "https://dx.doi.org/#{pub.doi}"
   

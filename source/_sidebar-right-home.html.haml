@@ -2,6 +2,10 @@
   %h3 Recent Publications
   %ul.unstyled
     - data.publications[0..2].each do |pub|
-      %li= pub.citation.gsub(/(?<name>V\. Bhandawat)/, '<strong>\k<name></strong>')
+      %li
+        = pub.citation.gsub(/(?<name>V\. Bhandawat)/, '<strong>\k<name></strong>')
+        - case not pub.doi.blank?
+        - when true 
+          = link_to "doi: #{pub.doi}", "https://dx.doi.org/#{pub.doi}"
 
   = link_to "More Publications", "#{http_prefix}publications/list", class: "more-link"
