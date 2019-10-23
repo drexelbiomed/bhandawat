@@ -19,3 +19,8 @@
   sub_pages:
     - title: Publications List
       url: list
+- title: Positions
+  url: positions
+  sub_pages: 
+    - title: Open Positions
+      url: open
